@@ -1,2 +1,2 @@
-# frondend
+# frontend
 Front End
