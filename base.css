@@ -1,34 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap');
 
 :root {
-    --offwhite-color: #e6e3dd;
-    --accentpink-color: #e246ab;
-    --darkgrey-color: #1B1B1B;
-    --lightgrey-color: #777;
-    --accentgreen-color: #73a05c;
+  --offwhite-color: #e6e3dd;
+  --darkgrey-color: #1B1B1B;
+  --lightgrey-color: #777;
+
+  --blue-color: #6C9DBB;
+
+  --accentpink-color: #e246ab;
+  --accentgreen-color: #8ecb6f;
 }
-  
+
 body {
   font-family: "Quicksand", Verdana, sans-serif;
   background-color: var(--darkgrey-color);
   padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 10px;
 }
 
 button {
-    background-color: var(--accentgreen-color);
-    color: var(--offwhite-color);
-    padding: 5px 10px;
-    margin-right: 8px;
-    border: none;
-    border-radius: 3px;
-    font-size: 100%;
-    font-family: "Quicksand", Verdana, sans-serif;
-    cursor: pointer;
+  background-color: var(--blue-color);
+  color: var(--darkgrey-color);
+  padding: 5px 10px;
+  margin-right: 8px;
+  border: none;
+  border-radius: 5px;
+  font-size: 100%;
+  font-family: "Quicksand", Verdana, sans-serif;
+  cursor: pointer;
 }
 
 button:hover {
-    background-color: var(--accentpink-color);
-    color: var(--offwhite-color);
-  }
-
-  
+  background-color: var(--accentpink-color);
+  color: var(--offwhite-color);
+}

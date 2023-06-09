@@ -86,25 +86,37 @@ document.addEventListener("DOMContentLoaded", function() {
       const detailsElement = document.createElement("div");
       detailsElement.classList.add("song-details");
       detailsElement.textContent = `${song.artist} · ${song.length} · ${song.album}`;
+
+      const buttonsContainer = document.createElement("div");
   
+      const spotifyButton = document.createElement("button");
+      spotifyButton.classList.add("spotify-button");
+      spotifyButton.innerHTML = "&#127925;";
+      spotifyButton.setAttribute("data-tooltip", "Click to open in Spotify");
+      // TODO: change to icon
+
       const shareButton = document.createElement("button");
       shareButton.classList.add("share-button");
       shareButton.innerHTML = "&#128279;";
+      shareButton.setAttribute("data-tooltip", "Click to see sharing options");
       // TODO: change to icon
-     
       
       const favoriteButton = document.createElement("button");
       favoriteButton.classList.add("favorite-button");
       favoriteButton.innerHTML = "&#128149;";
+      favoriteButton.setAttribute("data-tooltip", "Click to favorite song");
       // TODO: change to icon
 
       songInfoDiv.appendChild(titleElement);
       songInfoDiv.appendChild(detailsElement);
-  
+    
+      buttonsContainer.appendChild(spotifyButton);
+      buttonsContainer.appendChild(shareButton);
+      buttonsContainer.appendChild(favoriteButton);
+    
       songDiv.appendChild(songInfoDiv);
-      songDiv.appendChild(shareButton);
-      songDiv.appendChild(favoriteButton);
-  
+      songDiv.appendChild(buttonsContainer);
+
       return songDiv;
     }
 

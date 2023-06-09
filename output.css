@@ -1,27 +1,28 @@
-  h1 {
+ h1 {
+    color: var(--accentpink-color);
     text-align: center;
-    color: var(--offwhite-color);
   }
   
   h2 {
+    color: var(--accentgreen-color);
     text-align: center;
-    color: var(--accentpink-color);
+  }
+
+  #songList {
+    display: grid;
+    grid-gap: 10px;
   }
   
   .song {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
-    margin-left: 75px;
-    margin-right: 75px;
     background-color: var(--offwhite-color);
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
   }
   
   .song-info {
-    flex-grow: 1;
     margin-right: 10px;
   }
   
@@ -33,6 +34,35 @@
     font-size: 14px;
     color: var(--darkgrey-color);
   }
-  
 
+  .spotify-button,
+  .share-button,
+  .favorite-button {
+    position: relative;
+  }
+
+  .spotify-button::before,
+  .share-button::before,
+  .favorite-button::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-size: 12px;
+    border-radius: 3px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    white-space: nowrap;
+  }
   
+  .spotify-button:hover::before,
+  .share-button:hover::before,
+  .favorite-button:hover::before {
+    opacity: 1;
+    visibility: visible;
+  }
