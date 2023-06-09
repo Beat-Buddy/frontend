@@ -1,0 +1,38 @@
+  h1 {
+    text-align: center;
+    color: var(--offwhite-color);
+  }
+  
+  h2 {
+    text-align: center;
+    color: var(--accentpink-color);
+  }
+  
+  .song {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-left: 75px;
+    margin-right: 75px;
+    background-color: var(--offwhite-color);
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .song-info {
+    flex-grow: 1;
+    margin-right: 10px;
+  }
+  
+  .song-title {
+    font-weight: bold;
+  }
+  
+  .song-details {
+    font-size: 14px;
+    color: var(--darkgrey-color);
+  }
+  
+
+  
