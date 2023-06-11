@@ -1,0 +1,101 @@
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+button{
+    width: 5%;
+
+}
+
+
+.formContainer {
+    margin-top: 2%;
+    display: flex;
+    margin-left: 10%;
+    margin-right: 10%;
+    gap: 10%;
+}
+  
+.formItem {
+    /* Styles for the flex items */
+    flex: 1;
+    justify-content: space-evenly;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.selectedItemContainer{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    height: 1rem;
+    gap: 1rem;
+}
+
+.searchBarContainer{
+    margin-top: 2%;
+    display: flex;
+    margin-left: 35%;
+    margin-right: 35%;
+    flex-direction: column;
+    text-align: center;
+}
+
+.searchBarResultContainer{
+    display: flex;
+    flex-direction: row;
+    margin-top: 1%;
+    margin-left: 1%;
+    gap: 5%;
+}
+.searchBarResultContainer:hover{
+    background-color: lightgray;
+}
+
+.searchBarResultItemPictureTrack{
+    width: 3rem;
+    }
+.searchBarResultItemPictureArtist{
+    width: 3rem;
+    border-radius: 50%;
+}
+.searchBarResultItemTitle{
+    text-decoration: underline;
+}
+
+.seedSearchUnorderedList{
+    
+    border: 2px;
+}
+
+
+.buttonContainer{
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.labelForLists{
+    text-decoration: underline;
+}
+
+.clearAllButton{
+    background-color: gray;
+    color: white;
+}
+
+.searchButton{
+    margin-top: 1%;
+    width: 10%;
+    font-size: 1.5rem;
+}
