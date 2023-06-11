@@ -8,6 +8,12 @@
     text-align: center;
   }
 
+  h3 {
+    color: var(--darkgrey-color);
+    text-align: center;
+  }
+
+
   #songList {
     display: grid;
     grid-gap: 10px;
@@ -16,7 +22,7 @@
   .song {
     background-color: var(--offwhite-color);
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 5px;
     display: grid;
     grid-template-columns: 1fr auto;
     align-items: center;
@@ -65,4 +71,11 @@
   .favorite-button:hover::before {
     opacity: 1;
     visibility: visible;
+  }
+
+  .spotify-button img,
+  .share-button img,
+  .favorite-button img {
+    width: 25px;
+    height: 25px;
   }

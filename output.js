@@ -91,21 +91,40 @@ document.addEventListener("DOMContentLoaded", function() {
   
       const spotifyButton = document.createElement("button");
       spotifyButton.classList.add("spotify-button");
-      spotifyButton.innerHTML = "&#127925;";
-      spotifyButton.setAttribute("data-tooltip", "Click to open in Spotify");
-      // TODO: change to icon
+      spotifyButton.innerHTML = '<img src="/icons/spotify-icon.svg" alt="Spotify">';
+      spotifyButton.setAttribute("data-tooltip", "Open in Spotify");
 
       const shareButton = document.createElement("button");
       shareButton.classList.add("share-button");
-      shareButton.innerHTML = "&#128279;";
-      shareButton.setAttribute("data-tooltip", "Click to see sharing options");
-      // TODO: change to icon
+      shareButton.innerHTML = '<img src="/icons/share-icon.svg" alt="Share">';
+      shareButton.setAttribute("data-tooltip", "Show Sharing Options");
       
       const favoriteButton = document.createElement("button");
       favoriteButton.classList.add("favorite-button");
-      favoriteButton.innerHTML = "&#128149;";
-      favoriteButton.setAttribute("data-tooltip", "Click to favorite song");
-      // TODO: change to icon
+      favoriteButton.innerHTML = '<img src="/icons/heart-icon.svg" alt="Like">';
+      favoriteButton.setAttribute("data-tooltip", "Favorite Song");
+
+      const isActive = favoriteButton.classList.contains("active");
+
+      if (isActive) {
+        favoriteButton.innerHTML = '<img src="/icons/solid-heart-icon.svg" alt="Unlike">';
+        favoriteButton.setAttribute("data-tooltip", "Unfavorite Song");
+        favoriteButton.classList.add("active");
+      }
+
+      favoriteButton.addEventListener("click", function() {
+        if (favoriteButton.classList.contains("active")) {
+          favoriteButton.innerHTML = '<img src="/icons/heart-icon.svg" alt="Like">';
+          favoriteButton.setAttribute("data-tooltip", "Favorite Song");
+          favoriteButton.classList.remove("active");
+        } else {
+          favoriteButton.innerHTML = '<img src="/icons/solid-heart-icon.svg" alt="Unlike">';
+          favoriteButton.setAttribute("data-tooltip", "Unfavorite Song");
+          favoriteButton.classList.add("active");
+        }
+      });
+
+      // icons used: https://www.svgrepo.com/collection/zest-interface-icons/
 
       songInfoDiv.appendChild(titleElement);
       songInfoDiv.appendChild(detailsElement);
