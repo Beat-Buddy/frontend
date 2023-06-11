@@ -214,8 +214,9 @@ window.onload = function() {
 
     // Token Holen - gehört dann zwar ins Backend, und wird dem Client nach der Anmeldung mitgeschickt, aber vorerst
     // kann ich es so machen.
-        const client_id = '738a635c5e024cc78a5da978a89318b7';
-        const client_secret = '2d49cc0fdb524ddfb789441a5283054d';
+        // Daten vom Backend.
+        const client_id = 'a77c30d64c6e4f448693b864b9fa0ce8';
+        const client_secret = '7fe3fb3fb288461e8dd8949659f42971';
 
         let authOptions = {
             url: 'https://accounts.spotify.com/api/token',
