@@ -79,11 +79,11 @@ document.addEventListener("DOMContentLoaded", function() {
       const songInfoDiv = document.createElement("div");
       songInfoDiv.classList.add("song-info");
   
-      const titleElement = document.createElement("div");
+      const titleElement = document.createElement("p");
       titleElement.classList.add("song-title");
       titleElement.textContent = song.title;
   
-      const detailsElement = document.createElement("div");
+      const detailsElement = document.createElement("p");
       detailsElement.classList.add("song-details");
       detailsElement.textContent = `${song.artist} · ${song.length} · ${song.album}`;
 
@@ -91,34 +91,34 @@ document.addEventListener("DOMContentLoaded", function() {
   
       const spotifyButton = document.createElement("button");
       spotifyButton.classList.add("spotify-button");
-      spotifyButton.innerHTML = '<img src="/icons/spotify-icon.svg" alt="Spotify">';
+      spotifyButton.innerHTML = '<img src="./icons/spotify-icon.svg" alt="Spotify">';
       spotifyButton.setAttribute("data-tooltip", "Open in Spotify");
 
       const shareButton = document.createElement("button");
       shareButton.classList.add("share-button");
-      shareButton.innerHTML = '<img src="/icons/share-icon.svg" alt="Share">';
+      shareButton.innerHTML = '<img src="./icons/share-icon.svg" alt="Share">';
       shareButton.setAttribute("data-tooltip", "Show Sharing Options");
       
       const favoriteButton = document.createElement("button");
       favoriteButton.classList.add("favorite-button");
-      favoriteButton.innerHTML = '<img src="/icons/heart-icon.svg" alt="Like">';
+      favoriteButton.innerHTML = '<img src="./icons/heart-icon.svg" alt="Like">';
       favoriteButton.setAttribute("data-tooltip", "Favorite Song");
 
       const isActive = favoriteButton.classList.contains("active");
 
       if (isActive) {
-        favoriteButton.innerHTML = '<img src="/icons/solid-heart-icon.svg" alt="Unlike">';
+        favoriteButton.innerHTML = '<img src="./icons/solid-heart-icon.svg" alt="Unlike">';
         favoriteButton.setAttribute("data-tooltip", "Unfavorite Song");
         favoriteButton.classList.add("active");
       }
 
       favoriteButton.addEventListener("click", function() {
         if (favoriteButton.classList.contains("active")) {
-          favoriteButton.innerHTML = '<img src="/icons/heart-icon.svg" alt="Like">';
+          favoriteButton.innerHTML = '<img src="./icons/heart-icon.svg" alt="Like">';
           favoriteButton.setAttribute("data-tooltip", "Favorite Song");
           favoriteButton.classList.remove("active");
         } else {
-          favoriteButton.innerHTML = '<img src="/icons/solid-heart-icon.svg" alt="Unlike">';
+          favoriteButton.innerHTML = '<img src="./icons/solid-heart-icon.svg" alt="Unlike">';
           favoriteButton.setAttribute("data-tooltip", "Unfavorite Song");
           favoriteButton.classList.add("active");
         }
