@@ -1,3 +1,7 @@
+body{
+    color: #d3d3d3;
+}
+
 ul {
     margin: 0;
     padding: 0;
@@ -54,13 +58,16 @@ button{
     gap: 5%;
 }
 .searchBarResultContainer:hover{
-    background-color: lightgray;
+    background-color: var(--blue-color);
+    color: black;
 }
 
 .searchBarResultItemPictureTrack{
     width: 3rem;
-    }
-.searchBarResultItemPictureArtist{
+}
+
+.searchBarResultItemPictureArtist,
+.searchBarResultItemPictureGenre{
     width: 3rem;
     border-radius: 50%;
 }
@@ -70,7 +77,7 @@ button{
 
 .seedSearchUnorderedList{
     
-    border: 2px;
+    border: 1em;
 }
 
 
@@ -98,4 +105,74 @@ button{
     margin-top: 1%;
     width: 10%;
     font-size: 1.5rem;
+}
+
+/* Design for Sliders */
+.sliderActive{
+    -webkit-appearance: none;
+    width: 100%;
+    height: 1vw;
+    border-radius: 0.5vw;   
+    background: #d3d3d3;
+    outline: none;
+    opacity: 1;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.sliderNotActive{
+    -webkit-appearance: none;
+    width: 100%;
+    height: 1vw;
+    border-radius: 0.5vw;   
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+  
+.sliderActive::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 1.5vw;
+    height: 1.5vw;
+    border-radius: 50%; 
+    background: var(--blue-color);
+    cursor: pointer;
+}
+  
+.sliderActive::-moz-range-thumb {
+    width: 1.5vw;
+    height: 1.5vw;
+    border-radius: 50%;
+    background: var(--blue-color);
+    cursor: pointer;
+}
+
+.sliderNotActive::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 1.5vw;
+    height: 1.5vw;
+    border-radius: 50%; 
+    background: #545454;
+    cursor: pointer;
+}
+
+.sliderNotActive::-moz-range-thumb {
+    width: 1.5vw;
+    height: 1.5vw;
+    border-radius: 50%;
+    background: #545454;
+    cursor: pointer;
+}
+
+.sliderNotActive::-webkit-slider-thumb:hover{
+    background: var(--blue-color);
+}
+  
+/* Hover for Slider-Labels */
+.sliderLabelWhenSliderIsActive:hover{
+    text-decoration: line-through;
 }
